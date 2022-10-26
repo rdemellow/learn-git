@@ -5,6 +5,8 @@ import ("fmt")
 func main() {
     maxNum := 100
 
+    // I'm a cool comment
+
     for i := 0; i < maxNum; i++ {
         if i % 3 == 0 && i % 5 == 0 {
             fmt.Println("FizzBuzz")
