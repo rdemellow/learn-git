@@ -6,11 +6,14 @@ func main() {
     maxNum := 100
 
     for i := 0; i < maxNum; i++ {
-        if i % 3 == 0 && i % 5 == 0 {
+        isFactorOf5 := i % 5 == 0
+        isFactorOf3 := i % 3 == 0
+
+        if isFactorOf3 && isFactorOf5 {
             fmt.Println("FizzBuzz")
-        } else if i % 3 == 0 {
+        } else if isFactorOf3 {
             fmt.Println("Fizz");
-        } else if i % 5 == 0 {
+        } else if isFactorOf5 {
             fmt.Println("Buzz");
         } else {
             fmt.Println(i);
