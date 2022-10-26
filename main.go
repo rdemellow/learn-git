@@ -2,12 +2,16 @@ package main
 
 import ("fmt")
 
+func isFactor(value int, factor int) bool {
+    return value % factor == 0;
+}
+
 func main() {
     maxNum := 100
 
     for i := 0; i < maxNum; i++ {
-        isFactorOf5 := i % 5 == 0
-        isFactorOf3 := i % 3 == 0
+        isFactorOf5 := isFactor(i, 5);
+        isFactorOf3 := isFactor(i, 3);
 
         if isFactorOf3 && isFactorOf5 {
             fmt.Println("FizzBuzz")
